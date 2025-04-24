@@ -16,7 +16,7 @@ const TotxIntro = () => {
         with feedback all in one place.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="grid md:grid-cols-2 max-w-6xl gap-6 mx-auto">
         {/* instructor Card */}
         <div className="relative overflow-hidden rounded-xl group">
           <Image

@@ -4,6 +4,7 @@ import Hero from "./hero/hero";
 import SeccessSection from "./seccressSection/seccessSection";
 import CloudFeatures from "./cloudFeatures/cloudFeatures";
 import TotxIntro from "./totcIntro/totxIntro";
+import ClassroomSection from "./classroomSection/classroomSection";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <SeccessSection />
       <CloudFeatures />
       <TotxIntro />
+      <ClassroomSection />
     </div>
   );
 };
