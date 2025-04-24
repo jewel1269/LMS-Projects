@@ -75,13 +75,17 @@ const Navbar = () => {
             </div>
 
             <div className="flex gap-3 items-center mt-4 lg:mt-0">
-              <button className="border rounded-full p-1 px-6 bg-white text-black  border-gray-200">
-                Login
-              </button>
+              <Link href={"/authlogin"}>
+                <button className="border rounded-full p-1 px-6 hover:bg-gray-300 bg-white text-black  border-gray-200">
+                  Login
+                </button>
+              </Link>
 
-              <button className="border-[#338b88] border rounded-full p-1 px-6  text-black  ">
-                Signup
-              </button>
+              <Link href={"/authlogin"}>
+                <button className="border-[#338b88] hover:bg-gray-300 border rounded-full p-1 px-6  text-black  ">
+                  Signup
+                </button>
+              </Link>
             </div>
           </div>
         </div>
