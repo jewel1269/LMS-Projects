@@ -5,6 +5,7 @@ import SeccessSection from "./seccressSection/seccessSection";
 import CloudFeatures from "./cloudFeatures/cloudFeatures";
 import TotxIntro from "./totcIntro/totxIntro";
 import ClassroomSection from "./classroomSection/classroomSection";
+import Footer from "../footer/footer";
 
 const Index = () => {
   return (
@@ -15,6 +16,8 @@ const Index = () => {
       <CloudFeatures />
       <TotxIntro />
       <ClassroomSection />
+
+      <Footer />
     </div>
   );
 };
