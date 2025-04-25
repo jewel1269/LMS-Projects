@@ -5,6 +5,7 @@ import LearningPlatfrom from "./learningPlatfrom"
 import RecommadationCard from "./recommadationCard"
 import TeacherSection from "./teacherSection"
 import BioSection from "./bioSection"
+import OfferSection from "./offerSection";
 
 const Courses = () => {
   return (
@@ -15,6 +16,8 @@ const Courses = () => {
      <RecommadationCard/>
      <TeacherSection/>
      <BioSection/>
+     <OfferSection/>
+
     </div>
   );
 };
