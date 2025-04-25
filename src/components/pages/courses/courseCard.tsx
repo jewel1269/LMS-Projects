@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 interface Course {
   id: number;
@@ -98,49 +99,50 @@ const CourseCard = () => {
   return (
     <div className="grid grid-cols-1 lg:px-20 lg:grid-cols-4 sm:grid-cols-2 gap-6 p-6">
       {courses?.map((course) => (
-        <div
-          key={course.id}
-          className="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-xl"
-        >
-          <Image
-            src={course?.image}
-            alt={course?.title}
-            width={300}
-            height={300}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <div className="flex justify-between items-center">
-              <span>{course?.category}</span>
-              <span>{course?.duration}</span>
-            </div>
-            <h2 className="text-xl py-2 font-semibold text-gray-700">
-              {course?.title}
-            </h2>
-            <p className="text-sm text-gray-500 mt-1">{course?.description}</p>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2 py-2">
-                <Image
-                  src={course?.image}
-                  alt="user profile"
-                  height={200}
-                  width={200}
-                  className="w-10 h-10 rounded-full"
-                />
-                <span>{course?.author}</span>
+        <Link href={`/coursedetails/${course.id}`} key={course.id}>
+          <div className="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-xl">
+            <Image
+              src={course?.image}
+              alt={course?.title}
+              width={300}
+              height={300}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <div className="flex justify-between items-center">
+                <span>{course?.category}</span>
+                <span>{course?.duration}</span>
               </div>
-              <div className="gap-2 flex items-center">
-                <p className="text-md line-through text-gray-400">
-                  ${course?.oldPrice}
-                </p>
-                <p className="text-md font-semibold text-green-400">
-                  ${course?.newPrice}
-                </p>
+              <h2 className="text-xl py-2 font-semibold text-gray-700">
+                {course?.title}
+              </h2>
+              <p className="text-sm text-gray-500 mt-1">
+                {course?.description}
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2 py-2">
+                  <Image
+                    src={course?.image}
+                    alt="user profile"
+                    height={200}
+                    width={200}
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <span>{course?.author}</span>
+                </div>
+                <div className="gap-2 flex items-center">
+                  <p className="text-md line-through text-gray-400">
+                    ${course?.oldPrice}
+                  </p>
+                  <p className="text-md font-semibold text-green-400">
+                    ${course?.newPrice}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
