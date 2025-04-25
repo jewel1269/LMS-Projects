@@ -1,9 +1,12 @@
 import React from "react";
+import SearchWithFilter from "./searchWithFilter"
+import CourseCard from "./courseCard"
 
 const Courses = () => {
   return (
-    <div className="min-h-screen">
-      <h1>Hello Courses</h1>
+    <div>
+     <SearchWithFilter/>
+     <CourseCard/>
     </div>
   );
 };
