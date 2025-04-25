@@ -43,13 +43,13 @@ const Navbar = () => {
           >
             <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
               <Link
-                href="/slack"
+                href="/"
                 className="px-3 py-2 mx-3 mt-2 text-white text-lg  transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-900 dark:hover:bg-gray-700"
               >
                 Home
               </Link>
               <Link
-                href="/topics"
+                href="/course"
                 className="px-3 py-2 mx-3 mt-2 text-white text-lg  transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-900 dark:hover:bg-gray-700"
               >
                 Courses
