@@ -11,6 +11,10 @@ import {
 } from "react-icons/fa";
 import { BiCamera, BiCertification, BiMoney } from "react-icons/bi";
 import { MdOutlineEdit } from "react-icons/md";
+import RecommadationCard from "@/components/pages/courses/recommadationCard";
+import ClassroomSection from "@/components/homeLayout/classroomSection/classroomSection";
+import OfferSection from "@/components/pages/courses/offerSection";
+import Link from "next/link";
 
 interface Course {
   id: number;
@@ -122,9 +126,9 @@ const Page = ({ params }: { params: { id: string } }) => {
             className="w-[1950px] h-[650px]"
           />
         </div>
-        <div className="lg:px-32 flex justify-around gap-44 items-center">
-          <div>
-            <div className="flex gap-5 py-10">
+        <div className="lg:px-32 lg:flex  justify-around gap-44 items-center">
+          <div className="lg:px-0 px-3">
+            <div className="flex lg:gap-5 gap-1 py-10">
               {["overveiw", "overveiw", "overveiw", "overveiw"].map(
                 (label, i) => (
                   <button
@@ -205,16 +209,16 @@ const Page = ({ params }: { params: { id: string } }) => {
             </div>
           </div>
 
-          <div>
+          <div className="lg:px-0 px-3">
             <Image
               src={findCourse?.image ?? "/default-course-image.jpg"}
               alt={findCourse?.title ?? "Course Image"}
               width={300}
               height={300}
-              className="border-8  rounded-2xl border-white -mt-60"
+              className="border-8  rounded-2xl border-white lg:-mt-52"
             />
 
-            <div className="flex justify-between px-3 items-center">
+            <div className="flex lg:justify-between lg:gap-0 gap-3 px-3 items-center">
               <h1 className="text-2xl font-semibold text-black ">
                 ${findCourse?.newPrice}
               </h1>
@@ -231,9 +235,11 @@ const Page = ({ params }: { params: { id: string } }) => {
             </h1>
 
             <div className="flex justify-center mt-5">
-              <button className="text-white border border-gray-500 px-28 py-2 bg-teal-600 rounded-xl ">
-                Buy Now
-              </button>
+              <Link href={"/checkout"}>
+                <button className="text-white border border-gray-500 px-28 py-2 bg-teal-600 rounded-xl ">
+                  Buy Now
+                </button>
+              </Link>
             </div>
 
             <hr className="mt-5 font-bold px-3" />
@@ -296,6 +302,16 @@ const Page = ({ params }: { params: { id: string } }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="lg:py-10">
+        <RecommadationCard />
+      </div>
+      <div className="lg:py-10">
+        <ClassroomSection />
+      </div>
+      <div className="lg:py-10">
+        <OfferSection />
       </div>
     </section>
   );

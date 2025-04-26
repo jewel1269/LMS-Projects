@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
       "gsep.pepperdine.edu",
       "t4.ftcdn.net",
       "img.freepik.com",
+      "www.paypalobjects.com",
+      
     ],
   },
 };

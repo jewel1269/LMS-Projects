@@ -69,7 +69,7 @@ const courses: Course[] = [
 ];
 const RecommadationCard = () => {
   return (
-    <div className="lg:px-40 py-4 bg-[#d7e6f5]">
+    <div className="lg:px-40 py-4 bg-[#e5ecf2]">
       <div className="flex justify-between items-center">
         <h2 className="text-3xl ">Recommended for you</h2>
         <h2 className="text-2xl text-teal-500 font-semibold">See All</h2>
